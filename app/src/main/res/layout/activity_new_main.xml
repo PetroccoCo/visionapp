@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout2">
+
+    <TextView
+        android:text="@string/ocr_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        tools:targetApi="jelly_bean_mr1"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:text="@string/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/brand_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/brand_value"
+        app:layout_constraintBottom_toBottomOf="@+id/brand_value" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/brand_value"
+        android:selectAllOnFocus="true"
+        app:layout_constraintLeft_toRightOf="@+id/brand_label"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/status_message"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:id="@+id/clear_brand"
+        style="@style/Widget.AppCompat.Button.Small"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/brand_value" />
+
+    <TextView
+        android:text="@string/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/amount_value"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_value" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        android:id="@+id/amount_value"
+        app:layout_constraintLeft_toRightOf="@+id/amount_label"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/brand_value"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:id="@+id/clear_amount"
+        style="@style/Widget.AppCompat.Button.Small"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amount_value" />
+
+    <TextView
+        android:text="@string/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/code_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/code_value"
+        app:layout_constraintBottom_toBottomOf="@+id/code_value" />
+
+    <EditText
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/code_value"
+        app:layout_constraintTop_toBottomOf="@+id/amount_value"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:text="@string/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pin_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/pin_value"
+        app:layout_constraintBottom_toBottomOf="@+id/pin_value" />
+
+    <EditText
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/pin_value"
+        app:layout_constraintTop_toBottomOf="@+id/code_value"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2" />
+
+    <Button
+        android:text="Save Card"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:id="@+id/save_card"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:id="@+id/detect_text"
+        android:text="@string/read_text"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintRight_toLeftOf="@+id/save_card"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/save_card"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <CheckBox
+        android:text="@string/auto_focus"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/autofocus"
+        android:checked="true"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/detect_text"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <CheckBox
+        android:text="@string/use_flash"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/flash"
+        android:checked="false"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/autofocus" />
+
+</android.support.constraint.ConstraintLayout>
